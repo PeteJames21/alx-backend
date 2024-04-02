@@ -18,14 +18,22 @@ class FIFOCache(BaseCaching):
         if key is None or value is None:
             return
 
-        if len(self.cache_data) >= self.MAX_ITEMS:
+        if key not in self.cache_data.keys() and \
+            len(self.cache_data) >= self.MAX_ITEMS:
             # Delete the oldest item based on insertion order.
             k, _ = self.cache_data.popitem(last=False)
             # Print the discarded kay
             print("DISCARD:", k)
 
+        # Move the data to the end of the cache
+        if key in self.cache_data:
+            self.cache_data.move_to_end(key, last=True)
+
         self.cache_data[key] = value
 
     def get(self, key):
         """Get an item from the cache."""
-        return self.cache_data.get(key, None)
+        value = self.cache_data.get(key, None)
+        if value:
+            self.cache_data.move_to_end(key, last=True)
+        return value
