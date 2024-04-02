@@ -8,6 +8,8 @@ from collections import OrderedDict
 
 
 class LIFOCache(BaseCaching):
+    """A LIFO cache."""
+
     def __init__(self):
         """Initialize the cache."""
         super().__init__()

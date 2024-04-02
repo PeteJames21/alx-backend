@@ -8,6 +8,8 @@ from collections import OrderedDict
 
 
 class FIFOCache(BaseCaching):
+    """A FIFO cache."""
+
     def __init__(self):
         """Initialize the cache."""
         super().__init__()

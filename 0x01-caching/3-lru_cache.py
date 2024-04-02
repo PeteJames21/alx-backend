@@ -9,6 +9,7 @@ from collections import OrderedDict
 
 class LRUCache(BaseCaching):
     """An LRU cache."""
+
     def __init__(self):
         """Initialize the cache."""
         super().__init__()
