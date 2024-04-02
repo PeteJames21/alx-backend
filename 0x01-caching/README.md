@@ -22,3 +22,10 @@ Implement an LRU cache using an `OrderedDict`
 ## 4-mru_cache.py
 
 Implement an MRU cache using an `OrderedDict`
+
+## 100-lfu_cache.py
+
+Implement an lFRU cache using an `OrderedDict`.
+
+An LRFU is an LFU cache which uses access times to break ties when more than
+one item has the same frequency.
