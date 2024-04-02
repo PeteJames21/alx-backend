@@ -19,7 +19,7 @@ class LIFOCache(BaseCaching):
             return
 
         if key not in self.cache_data.keys() and \
-            len(self.cache_data) >= self.MAX_ITEMS:
+                len(self.cache_data) >= self.MAX_ITEMS:
             # Delete the most recent item based on insertion order.
             k, _ = self.cache_data.popitem(last=True)
             # Print the discarded kay
@@ -33,7 +33,4 @@ class LIFOCache(BaseCaching):
 
     def get(self, key):
         """Get an item from the cache."""
-        value = self.cache_data.get(key, None)
-        if value:
-            self.cache_data.move_to_end(key, last=True)
-        return value
+        return self.cache_data.get(key, None)
