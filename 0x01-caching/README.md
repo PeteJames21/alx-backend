@@ -18,3 +18,7 @@ Implement a LIFO cache using an `OrderedDict`
 ## 3-lru_cache.py
 
 Implement an LRU cache using an `OrderedDict`
+
+## 4-mru_cache.py
+
+Implement an MRU cache using an `OrderedDict`
