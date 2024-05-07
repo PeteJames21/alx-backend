@@ -32,3 +32,7 @@ At the end of the file, call:
     displaySchoolValue('Holberton');
     setNewSchool('HolbertonSanFrancisco', '100');
     displaySchoolValue('HolbertonSanFrancisco');
+
+## 4-redis_advanced_op.js
+
+Use `HSET` to store a hash value and `HGETALL` to retrieve the object stored.
