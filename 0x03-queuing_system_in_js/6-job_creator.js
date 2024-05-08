@@ -1,5 +1,6 @@
 #!/usr/bin/node
 import Bull from "bull";
+import sendNotification from "./6-job_processor.js";
 
 class Message {
   constructor (phoneNumber, message) {
@@ -25,6 +26,8 @@ messages.on('waiting', (id) =>
 messages.on('failed', (job, error) =>
   console.log('Notification job failed:', error)
 )
+
+messages.process(sendNotification);
 
 messages.add(new Message('123', 'hey'));
 messages.add(new Message('999', 'Bonjour'));
