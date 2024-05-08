@@ -91,3 +91,7 @@ Name the job-processing function `sendNotification`. It will log to the console 
 ## 7-job_creator.js
 
 Add jobs to a queue from an array
+
+## 7-job_processor.js
+
+Track progress of queued jobs
