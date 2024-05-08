@@ -13,7 +13,7 @@ const messages = new Bull('messages');
 
 // Called when a job is completed
 messages.on('completed', (job, result) =>
-  console.log('Notification job completed')
+  console.log(`Notification job completed: (id: ${job.id}), (result: ${result})`)
 )
 
 // Called when a job has been added to the queue
@@ -26,4 +26,5 @@ messages.on('failed', (job, error) =>
   console.log('Notification job failed:', error)
 )
 
-messages.add(new Message(123, 'hey'));
+messages.add(new Message('123', 'hey'));
+messages.add(new Message('999', 'Bonjour'));
