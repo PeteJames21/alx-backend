@@ -19,6 +19,7 @@
     "globals": "^15.1.0"
   },
   "dependencies": {
+    "bull": "^4.12.2",
     "redis": "^4.6.13"
   }
 }

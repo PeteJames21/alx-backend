@@ -64,3 +64,20 @@ In a file named `5-publisher.js`, create a redis client:
   publishMessage("KILL_SERVER", 300);
   publishMessage("Holberton Student #3 starts course", 400);
   ```
+
+## 6-job_creator.js
+
+Using `bull`, create a queue called `messages`
+
+Jobs in the queue will have the following format:
+
+```
+{
+  phoneNumber: string,
+  message: string,
+}
+```
+
+When the job is created without error, log to the console `Notification job created: JOB ID`
+When the job is completed, log to the console `Notification job completed`
+When the job is failing, log to the console `Notification job failed`
