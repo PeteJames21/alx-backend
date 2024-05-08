@@ -87,3 +87,7 @@ When the job is failing, log to the console `Notification job failed`
 Create a job processor that processes jobs from the queue defined in `6-job_creator.js`
 
 Name the job-processing function `sendNotification`. It will log to the console `Sending notification to PHONE_NUMBER, with message: MESSAGE`
+
+## 7-job_creator.js
+
+Add jobs to a queue from an array
