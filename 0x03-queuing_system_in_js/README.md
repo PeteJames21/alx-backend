@@ -81,3 +81,9 @@ Jobs in the queue will have the following format:
 When the job is created without error, log to the console `Notification job created: JOB ID`
 When the job is completed, log to the console `Notification job completed`
 When the job is failing, log to the console `Notification job failed`
+
+## 6-job_processor.js
+
+Create a job processor that processes jobs from the queue defined in `6-job_creator.js`
+
+Name the job-processing function `sendNotification`. It will log to the console `Sending notification to PHONE_NUMBER, with message: MESSAGE`
